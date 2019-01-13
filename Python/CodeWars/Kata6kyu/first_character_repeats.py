@@ -9,17 +9,9 @@ This is not the same as finding the character that repeats first. In that case, 
 
 
 def first_duplicated(string):
-    letterFound = False
-    letterPosition = 0
-
     for letter in string:
-        if string.count(letter) > 1 and letterFound == False:
-            letterPosition = string.find(letter)
-            letterFound = True
-
-    if letterFound:
-        return string[letterPosition]
-
+        if string.count(letter) > 1:
+            return letter
     return None
 
 
